@@ -60,9 +60,12 @@ export default function ListingDetails() {
 
                         {user ? (
                             !isOwner ? (
-                                <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                                <Link
+                                    to={`/messages/${listing.seller_id}?listingId=${listing.id}`}
+                                    className="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition"
+                                >
                                     Message Seller
-                                </button>
+                                </Link>
                             ) : (
                                 <div className="text-center text-gray-500 italic">
                                     You are the seller of this item.

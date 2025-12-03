@@ -7,6 +7,7 @@ import Sell from './pages/Sell';
 import MyListings from './pages/MyListings';
 import Messages from './pages/Messages';
 import ListingDetails from './pages/ListingDetails';
+import MessageThread from './pages/MessageThread';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="listings/:id" element={<ListingDetails />} />
             <Route path="my-listings" element={<MyListings />} />
             <Route path="messages" element={<Messages />} />
+            <Route path="messages/:userId" element={<MessageThread />} />
           </Route>
         </Routes>
       </AuthProvider>
