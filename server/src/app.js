@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
+const listingsRoutes = require('./routes/listings');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/listings', listingsRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
