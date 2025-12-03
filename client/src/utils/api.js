@@ -12,6 +12,7 @@ export const api = {
         const config = {
             method,
             headers,
+            cache: 'no-store',
         };
 
         if (body) {
