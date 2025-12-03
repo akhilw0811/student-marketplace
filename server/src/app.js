@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
 const listingsRoutes = require('./routes/listings');
+const messagesRoutes = require('./routes/messages');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/listings', listingsRoutes);
+app.use('/api/messages', messagesRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
